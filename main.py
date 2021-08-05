@@ -1,17 +1,21 @@
+# Imports
 from tkinter import *
-from tkinter.filedialog import asksaveasfilename, askopenfilename
+from tkinter.filedialog import *
 import subprocess
 
+#Setting the app
 compiler = Tk()
 compiler.title('PyIDEA')
 file_path = ''
 
 
+# File Path
 def set_file_path(path):
     global file_path
     file_path = path
 
 
+#open file script    
 def open_file():
     path = askopenfilename(filetypes=[('Python Files', '*.py')])
     with open(path, 'r') as file:
